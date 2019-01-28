@@ -1,6 +1,5 @@
 #!/bin/bash
 
-kubectl project dev
 
 kubectl patch deployment carts -p '{"spec":{"template":{"metadata":{"annotations":{"dynatrace/instrument": "true"}}}}}'
 kubectl patch deployment catalogue -p '{"spec":{"template":{"metadata":{"annotations":{"dynatrace/instrument": "true"}}}}}'
