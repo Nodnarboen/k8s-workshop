@@ -28,12 +28,6 @@ spec:
       - name: payment
         image: dynatracesockshop/payment:0.5.0
         resources:
-          limits:
-            cpu: 500m
-            memory: 1024Mi
-          requests:
-            cpu: 400m
-            memory: 1024Mi
         ports:
         - containerPort: 8080
         volumeMounts:
