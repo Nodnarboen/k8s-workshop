@@ -1,2 +1,1 @@
-# hot2019-k8s
-# HOTK8S
+# Hands On Training for APAC Bootcamp K8S 
