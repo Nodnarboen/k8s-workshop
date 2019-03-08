@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "clusterVersion": "1.162.140.20190225-132002",
+    "configurationVersions": [
+      2
+    ]
+  },
+  "id": "33939c5f-18d1-4295-95e5-8e495402cecf",
+  "dashboardMetadata": {
+    "name": "💲 Risk Revenue Analysis By Member Status",
+    "owner": "admin",
+    "timeframe": "",
+    "managementZone": null
+  },
+  "tiles": [
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥇",
+      "query": "select sum(doubleProperties.bookingtotal) as \"Platinum Revenue\" FROM usersession where useraction.name = \"Finish\" and stringProperties.membershipstatus=\"Platinum\"and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Platinum Revenue"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 342,
+        "width": 1634,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥇",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(doubleProperties.bookingtotal) as \"Platinum Revenue\" FROM usersession where useraction.name = \"Finish\" and doubleProperties.bookingtotal>0  and stringProperties.membershipstatus=\"Platinum\"and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "COLUMN_CHART",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Time"
+        ],
+        "yAxis": [
+          "Platinum Revenue"
+        ]
+      }
+    },
+    {
+      "name": "Platinum Risk Revenue",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Platinum Risk Revenue Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 342,
+        "width": 836,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Gold Risk Revenue",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 0,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Gold Risk Revenue Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 342,
+        "width": 608,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Silver Risk Revenue",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 0,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Silver Risk Revenue Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 342,
+        "width": 684,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 0,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥈",
+      "query": "select sum(doubleProperties.bookingtotal) as \"Gold Revenue\" FROM usersession where useraction.name = \"Finish\" and stringProperties.membershipstatus=\"Gold\" and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Gold Revenue"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 342,
+        "width": 1634,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥈",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(doubleProperties.bookingtotal) as \"Gold Revenue\" FROM usersession where useraction.name = \"Finish\" and doubleProperties.bookingtotal>0  and stringProperties.membershipstatus=\"Gold\"and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "COLUMN_CHART",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Time"
+        ],
+        "yAxis": [
+          "Gold Revenue"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 0,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥉",
+      "query": "select sum(doubleProperties.bookingtotal) as \"Silver Revenue\" FROM usersession where useraction.name = \"Finish\" and stringProperties.membershipstatus=\"Silver\"and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Silver Revenue"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 342,
+        "width": 1634,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥉",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(doubleProperties.bookingtotal) as \"Silver Revenue\" FROM usersession where useraction.name = \"Finish\" and doubleProperties.bookingtotal>0  and stringProperties.membershipstatus=\"Silver\"and (useraction.apdexCategory =\"TOLERATING\" or useraction.apdexCategory =\"FRUSTRATED\" or useraction.apdexCategory =\"UNKNOWN\")",
+      "type": "COLUMN_CHART",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Time"
+        ],
+        "yAxis": [
+          "Silver Revenue"
+        ]
+      }
+    }
+  ]
+}
