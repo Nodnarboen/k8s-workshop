@@ -1,0 +1,622 @@
+{
+  "metadata": {
+    "clusterVersion": "1.162.140.20190225-132002",
+    "configurationVersions": [
+      2
+    ]
+  },
+  "id": "4e6a3f35-e527-4a25-a07c-8aeb735c0269",
+  "dashboardMetadata": {
+    "name": "🛒 Book Travel Funnel",
+    "owner": "admin",
+    "timeframe": "",
+    "managementZone": null
+  },
+  "tiles": [
+    {
+      "name": "_____________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 266,
+        "width": 1596,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "🏡",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 266,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 266,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home",
+      "query": "select count(*) as \"Requests\" from usersession where useraction.name=\"Home\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Requests"
+        ],
+        "yAxis": [
+          "Requests"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 570,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home->Search",
+      "query": "select count(*) as \"Requests\" from usersession where useraction.name=\"Home\" and useraction.name=\"Search\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Requests"
+        ],
+        "yAxis": [
+          "Requests"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 874,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home->Search->Review",
+      "query": "select count(*) as \"Requests\" from usersession where useraction.name=\"Home\" and useraction.name=\"Search\" and useraction.name=\"Review\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Requests"
+        ],
+        "yAxis": [
+          "Requests"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1178,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home->Search->Payment",
+      "query": "select count(*) as \"Requests\" from usersession where useraction.name=\"Home\" and useraction.name=\"Search\" and useraction.name=\"Review\" and useraction.name=\"Payment\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Requests"
+        ],
+        "yAxis": [
+          "Requests"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1482,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home->Search->Review->Payment->Finish",
+      "query": "select count(*) as \"Requests\" from usersession where useraction.name=\"Home\" and useraction.name=\"Search\" and useraction.name=\"Review\" and useraction.name=\"Payment\" and useraction.name=\"Finish\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Requests"
+        ],
+        "yAxis": [
+          "Requests"
+        ]
+      }
+    },
+    {
+      "name": "🏡➡🔎",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 570,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "🏡➡🔎➡👀",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 874,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "🏡➡🔎➡👀➡💳",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1178,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "🏡➡🔎➡👀➡💳➡🏁",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1482,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Requests",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 114,
+        "width": 152,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Errors",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 836,
+        "left": 114,
+        "width": 152,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 874,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Review",
+      "query": "select count(useraction.errorCount) as \"Errors\" FROM usersession where useraction.name=\"Review\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Errors"
+        ],
+        "yAxis": [
+          "Errors"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 266,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Home",
+      "query": "select count(useraction.errorCount) as \"Errors\" FROM usersession where useraction.name=\"Home\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Errors"
+        ],
+        "yAxis": [
+          "Errors"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 570,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Search",
+      "query": "select count(useraction.errorCount) as \"Errors\" FROM usersession where useraction.name=\"Search\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Errors"
+        ],
+        "yAxis": [
+          "Errors"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 1178,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Payment",
+      "query": "select count(useraction.errorCount) as \"Errors\" FROM usersession where useraction.name=\"Payment\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Errors"
+        ],
+        "yAxis": [
+          "Errors"
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 1482,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "Finish",
+      "query": "select count(useraction.errorCount) as \"Errors\" FROM usersession where useraction.name=\"Finish\"",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Errors"
+        ],
+        "yAxis": [
+          "Errors"
+        ]
+      }
+    },
+    {
+      "name": "_____________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 266,
+        "width": 1596,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 266,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Home",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "sortingPerEntityType": {
+            "APPLICATION_METHOD": {
+              "column": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM|AVG|BAR|APPLICATION_METHOD",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "APPLICATION_METHOD": {
+            "SPECIFIC_ENTITIES": [
+              "APPLICATION_METHOD-2F6AB88B58E07038"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Duration",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 114,
+        "width": 152,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 570,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Search",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "sortingPerEntityType": {
+            "APPLICATION_METHOD": {
+              "column": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM|AVG|BAR|APPLICATION_METHOD",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "APPLICATION_METHOD": {
+            "SPECIFIC_ENTITIES": [
+              "APPLICATION_METHOD-A7C28A8098432D1A"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 874,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Review",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "sortingPerEntityType": {
+            "APPLICATION_METHOD": {
+              "column": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM|AVG|BAR|APPLICATION_METHOD",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "APPLICATION_METHOD": {
+            "SPECIFIC_ENTITIES": [
+              "APPLICATION_METHOD-1F1AFD5C520F4BEA"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 1178,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Payment",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "sortingPerEntityType": {
+            "APPLICATION_METHOD": {
+              "column": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM|AVG|BAR|APPLICATION_METHOD",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "APPLICATION_METHOD": {
+            "SPECIFIC_ENTITIES": [
+              "APPLICATION_METHOD-EC4E3DC65C1FA8DC"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 1482,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Finish",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "sortingPerEntityType": {
+            "APPLICATION_METHOD": {
+              "column": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM|AVG|BAR|APPLICATION_METHOD",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "APPLICATION_METHOD": {
+            "SPECIFIC_ENTITIES": [
+              "APPLICATION_METHOD-049DBF5A3D64BC4D"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
