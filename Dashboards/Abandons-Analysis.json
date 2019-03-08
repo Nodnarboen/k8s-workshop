@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "clusterVersion": "1.162.140.20190225-132002",
+    "configurationVersions": [
+      2
+    ]
+  },
+  "id": "0e1f3368-3fc1-4d52-9b1c-9d4f3e14f086",
+  "dashboardMetadata": {
+    "name": "☠ Abandons Analysis",
+    "owner": "admin",
+    "timeframe": "l_2_HOURS",
+    "managementZone": null
+  },
+  "tiles": [
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 760,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥉",
+      "query": "select count(distinct userSessionId) as \"Silver Abandons Count\" FROM usersession where \tstringProperties.membershipstatus=\"Silver\" and useraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Silver Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 456,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥈",
+      "query": "select count(distinct userSessionId) as \"Gold Abandons Count\" FROM usersession where \tstringProperties.membershipstatus=\"Gold\" and useraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Gold Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 152,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "🥇",
+      "query": "select count(distinct userSessionId) as \"Platinum Abandons Count\" FROM usersession where \tstringProperties.membershipstatus=\"Platinum\" and useraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Platinum Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "Abandons By Member Status",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 456,
+        "width": 456,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "_______________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 152,
+        "width": 988,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Abandons  By APDEX",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1482,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "_______________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1140,
+        "width": 988,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1140,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "😊",
+      "query": "select count(distinct userSessionId) as \"Satisfied Abandons Count\" FROM usersession where useraction.apdexCategory=\"SATISFIED\" and useraction.name!=\"Finish\" and \tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Satisfied Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1444,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "😟",
+      "query": "select count(distinct userSessionId) as \"Tolerating Abandons Count\" FROM usersession where \tuseraction.apdexCategory=\"TOLERATING\" and useraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Tolerating Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1748,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "😢",
+      "query": "select count(distinct userSessionId) as \"Frustrated Abandons Count\" FROM usersession where \tuseraction.apdexCategory=\"FRUSTRATED\" and useraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "KPI",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Frustrated Abandons Count"
+        ],
+        "yAxis": [
+          null
+        ]
+      }
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 152,
+        "width": 1900,
+        "height": 532
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "customName": "☠",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Abandons Count\" FROM usersession where \tuseraction.name!=\"Finish\" and\n\tdoubleProperties.bookingtotal>0",
+      "type": "COLUMN_CHART",
+      "samplingType": "STANDARD",
+      "chartConfig": {
+        "xAxis": [
+          "Time"
+        ],
+        "yAxis": [
+          "Abandons Count"
+        ]
+      }
+    },
+    {
+      "name": "___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 152,
+        "width": 1976,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": " Abandons Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 988,
+        "width": 304,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    }
+  ]
+}
