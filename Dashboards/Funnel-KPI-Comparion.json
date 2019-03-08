@@ -1,0 +1,749 @@
+{
+  "metadata": {
+    "clusterVersion": "1.162.140.20190225-132002",
+    "configurationVersions": [
+      2
+    ]
+  },
+  "id": "c3656940-7cda-4130-a520-f7390458183c",
+  "dashboardMetadata": {
+    "name": "🛒 Funnel KPI Comparison",
+    "owner": "admin",
+    "timeframe": "l_2_HOURS",
+    "managementZone": null
+  },
+  "tiles": [
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 76,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🏆 Funnel Steps",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_COUNT_KPM",
+              "aggregation": "COUNT",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550781365828,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550781354491,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550781445452,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550781586336,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 380,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "👀 Visually Complete",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_VISUALLY_COMPLETE_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550781758700,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550781687594,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550781493576,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550781609646,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 684,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "👋 Apdex",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_APDEX",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550781775492,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550781707191,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550781514279,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550781627140,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 988,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "⏳ Duration ",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550781791160,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550781720698,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550781531016,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550781646870,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1292,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🖇Network",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_NETWORK_CONSUMPTION",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550786903881,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-CC8B094AEF1D0877": {
+              "lastModified": 1550787000015,
+              "customColor": "#b4e5f9"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550786799053,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550786851079,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550786945353,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1596,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🖥 Server",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_SERVER_CONSUMPTION",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550786916635,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-CC8B094AEF1D0877": {
+              "lastModified": 1550787019308,
+              "customColor": "#b4e5f9"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550786817044,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550786869281,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550786964448,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 76,
+        "width": 1938,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 76,
+        "width": 1938,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Current Funnel API Analysis",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 874,
+        "width": 342,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Previous Funnel KPI Analysis",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 874,
+        "width": 342,
+        "height": 38
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 76,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🏆 Funnel Steps",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_COUNT_KPM",
+              "aggregation": "COUNT",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789172047,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789001771,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789282194,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789417112,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 380,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "👀 Visually Complete",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_VISUALLY_COMPLETE_KPM",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789183303,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789016177,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789325813,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789430989,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 684,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "👋 Apdex",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_APDEX",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789196289,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789033076,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789337906,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789450566,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 988,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "⏳ Duration ",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_USER_ACTION_DURATION_KPM",
+              "aggregation": "MEDIAN",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789209061,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789046804,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789354368,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789466865,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1292,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🖇Network",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_NETWORK_CONSUMPTION",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789228821,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789064386,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789370228,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789482666,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1596,
+        "width": 304,
+        "height": 304
+      },
+      "useComparisionTimeframe": false,
+      "managementZone": null,
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "🖥 Server",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "KPI",
+          "sortingPerEntityType": {
+            "APPLICATION": {
+              "column": "CTS_APPLICATION_USER_ACTION_COUNT_KPM|COUNT|LINE|APPLICATION",
+              "ascending": false
+            }
+          },
+          "series": [
+            {
+              "metric": "CTS_APPLICATION_METHOD_SERVER_CONSUMPTION",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION_METHOD",
+              "dimensions": []
+            }
+          ],
+          "resultMetadata": {
+            "APPLICATION_METHOD-883311326F9452A9": {
+              "lastModified": 1550789248157,
+              "customColor": "#1496ff"
+            },
+            "APPLICATION_METHOD-13BA7F252C73BD78": {
+              "lastModified": 1550789077295,
+              "customColor": "#b4dc00"
+            },
+            "APPLICATION_METHOD-3FA89ABE7A545175": {
+              "lastModified": 1550789382064,
+              "customColor": "#73be28"
+            },
+            "APPLICATION_METHOD-2EB50D28812BF8B8": {
+              "lastModified": 1550789499234,
+              "customColor": "#6f2da8"
+            }
+          }
+        },
+        "filtersPerEntityType": {}
+      }
+    }
+  ]
+}
