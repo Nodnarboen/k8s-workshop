@@ -74,6 +74,16 @@ kubectl create clusterrolebinding dynatrace-monitoring-cluster \
     --clusterrole dynatrace-monitoring-cluster \
     --user=$(gcloud config get-value account)
 
+Go to /var/lib/dynatrace/gateway/config – switch to root user with sudo su
+Edit custom.properties NOT config.properties
+Append with the following:
+[kubernetes_monitoring]
+kubernetes_monitoring_enabled = true
+Restart Activegate:
+service dynatracegateway stop 
+service dynatracegateway start
+
+
 kubectl create namespace dynatrace (optional)
 kubectl apply -f dynatrace-monitoring.serviceaccount.yaml
 kubectl apply -f dynatrace-monitoring-cluster.clusterrole.yaml
