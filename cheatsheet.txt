@@ -78,7 +78,7 @@ kubectl apply -f dynatrace-monitoring-events.clusterrolebinding.yaml
 kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}' &
 kubectl get secret $(kubectl get sa dynatrace-monitoring -o jsonpath='{.secrets[0].name}' -n dynatrace) -o jsonpath='{.data.token}' -n dynatrace | base64 -d &
 
-== Labs ==
+== Labs - K8s Labels and annotations ==
 
 kubectl get pods -n production -o wide
 kubectl get pods –n dev –o wide
@@ -91,6 +91,19 @@ kubectl create rolebinding serviceaccounts-view --clusterrole=view --group=syste
 
 ./recycle-sockshop-frontend.sh
 
+== Labs - Container Envrionment variables ==
+
+Add some Environment Variables to the /HOT-k8s/manifests/sockshop-app/production/front-end.yml
+
+env:
+- name: DT_TAGS
+  value: "product=sockshop"
+- name: DT_CUSTOM_PROP
+  value: "SERVICE_TYPE=FRONTEND"
+
+kubectl apply –f front-end.yml
+cd /HOT-k8s/
+./recycle-sockshop-frontend.sh
 
 
 
