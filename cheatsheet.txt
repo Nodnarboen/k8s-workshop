@@ -17,13 +17,12 @@ kubectl get nodes
 
 git clone https://github.com/nodnarboen/HOT-k8s.git
 
-git clone https://github.com/Dynatrace/easyTravel-Docker.git
-
 https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/
 
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole=cluster-admin --user=$(gcloud config get-value account)
-  
+
+kubectl create namespace dynatrace
 LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneagent-operator/releases/latest | grep tag_name | cut -d '"' -f 4)
 kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml
 kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator  
