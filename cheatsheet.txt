@@ -105,5 +105,30 @@ kubectl apply –f front-end.yml
 cd /HOT-k8s/
 ./recycle-sockshop-frontend.sh
 
+== Labs - Process Naming Rule for K8S ==
+
+k8s-{ProcessGroup:Kubernetes:pipeline.project}.{ProcessGroup:KubernetesNamespace}.{ProcessGroup:KubernetesContainerName}
+
+== Labs - Service Naming Rule for K8S ==
+
+{Service:DetectedName}.{ProcessGroup:KubernetesNamespace}
+
+== Labs - Canary Deployment == 
+
+./deploy-canary.sh
+
+kubectl get pods -n production -o wide 
+
+Process Detection Rule config
+Settings -> Processes and containers -> Process group detection.
+We want to apply this rule for pods running in production only (namespace=production)
+Also, extract the identifier after the "." in the pod name. Remember the pod names have ".stable "or ".canary" in their name to distinguish them.
+
+./recycle-sockshop-frontend.sh
+
+kubectl get deployments -n production -l tier=frontend
+
+Merge Service
+
 
 
