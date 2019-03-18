@@ -28,10 +28,10 @@ LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneage
 kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml
 kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator  
 
-kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=fHBq_z4ISNyIElDIDwQD1" --from-literal="paasToken=oaPBTcmjTdq7ddxnxH4xM"
+kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=<API_TOKEN>" --from-literal="paasToken=<PAAS_TOKEN>"
 
-API_TOKEN: fHBq_z4ISNyIElDIDwQD1
-PAAS_TOKEN: oaPBTcmjTdq7ddxnxH4xM
+API_TOKEN: 
+PAAS_TOKEN: 
 
 curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml
 
