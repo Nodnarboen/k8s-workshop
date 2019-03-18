@@ -56,6 +56,30 @@ kubectl get pods -n dynatrace
 cd /HOT-k8s
 ./deploy-sockshop.sh
 
+== Kubenetes Dashboard Setup
+
+Go to /var/lib/dynatrace/gateway/config – switch to root user with sudo su
+Edit custom.properties NOT config.properties
+
+Append with the following:
+[kubernetes_monitoring]
+kubernetes_monitoring_enabled = true
+
+Restart Activegate:
+service dynatracegateway stop 
+service dynatracegateway start
+
+kubectl apply -f dynatrace-monitoring.serviceaccount.yaml
+kubectl apply -f dynatrace-monitoring-cluster.clusterrole.yaml
+kubectl apply -f dynatrace-monitoring-cluster.clusterrolebinding.yaml
+kubectl apply -f dynatrace-monitoring-events.clusterrole.yaml
+kubectl apply -f dynatrace-monitoring-events.clusterrolebinding.yaml
+
+kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}' &
+kubectl get secret $(kubectl get sa dynatrace-monitoring -o jsonpath='{.secrets[0].name}' -n dynatrace) -o jsonpath='{.data.token}' -n dynatrace | base64 -d &
+
+== Labs ==
+
 kubectl get pods -n production -o wide
 kubectl get pods –n dev –o wide
 
@@ -68,29 +92,5 @@ kubectl create rolebinding serviceaccounts-view --clusterrole=view --group=syste
 ./recycle-sockshop-frontend.sh
 
 
-== Kubenetes Dashboard Setup
 
-kubectl create clusterrolebinding dynatrace-monitoring-cluster \
-    --clusterrole dynatrace-monitoring-cluster \
-    --user=$(gcloud config get-value account)
-
-Go to /var/lib/dynatrace/gateway/config – switch to root user with sudo su
-Edit custom.properties NOT config.properties
-Append with the following:
-[kubernetes_monitoring]
-kubernetes_monitoring_enabled = true
-Restart Activegate:
-service dynatracegateway stop 
-service dynatracegateway start
-
-
-kubectl create namespace dynatrace (optional)
-kubectl apply -f dynatrace-monitoring.serviceaccount.yaml
-kubectl apply -f dynatrace-monitoring-cluster.clusterrole.yaml
-kubectl apply -f dynatrace-monitoring-cluster.clusterrolebinding.yaml
-kubectl apply -f dynatrace-monitoring-events.clusterrole.yaml
-kubectl apply -f dynatrace-monitoring-events.clusterrolebinding.yaml
-
-kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}' &
-kubectl get secret $(kubectl get sa dynatrace-monitoring -o jsonpath='{.secrets[0].name}' -n dynatrace) -o jsonpath='{.data.token}' -n dynatrace | base64 -d &
 
