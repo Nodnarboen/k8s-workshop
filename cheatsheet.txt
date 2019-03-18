@@ -101,7 +101,7 @@ env:
 - name: DT_CUSTOM_PROP
   value: "SERVICE_TYPE=FRONTEND"
 
-kubectl apply –f front-end.yml
+kubectl apply -f front-end.yml
 cd /HOT-k8s/
 ./recycle-sockshop-frontend.sh
 
