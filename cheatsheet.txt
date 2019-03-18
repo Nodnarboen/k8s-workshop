@@ -1,18 +1,87 @@
-DYNATRACE_TENANT_URL:
-DYNATRACE_USER_NAME:
-DYNATRACE_PASSWORD:
+Sign up free account with GCP 
+- Enter CC details, free 12 months
 
-YOUR_ID:
+Use Cloud Shell
 
-OCP_LOGIN: opentlc-mgr
-OCP_PASSWORD: r3dh4t1!
-BASTION_HOST: bastion.<YOUR_ID>.ocpworkshop.dtinnovationlabs.net
-OCP_WORKER_NODE:
+https://cloud.google.com/kubernetes-engine/docs/quickstart#create_cluster
 
-ENVIRONMENT_ID=
-API_TOKEN=
-PAAS_TOKEN=
+=== Enable K8s API via UI 
+
+https://cloud.google.com/compute/docs/regions-zones/#available
+
+gcloud config set compute/zone australia-southeast1-a
+
+gcloud container clusters create apacbootcamp2019 --no-enable-legacy-authorization
+
+kubectl get nodes
+
+git clone https://github.com/nodnarboen/HOT-k8s.git
+
+git clone https://github.com/Dynatrace/easyTravel-Docker.git
+
+https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/
+
+kubectl create clusterrolebinding cluster-admin-binding \
+  --clusterrole=cluster-admin --user=$(gcloud config get-value account)
+  
+LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneagent-operator/releases/latest | grep tag_name | cut -d '"' -f 4)
+kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml
+kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator  
+
+kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=fHBq_z4ISNyIElDIDwQD1" --from-literal="paasToken=oaPBTcmjTdq7ddxnxH4xM"
+
+API_TOKEN: fHBq_z4ISNyIElDIDwQD1
+PAAS_TOKEN: oaPBTcmjTdq7ddxnxH4xM
+
+curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml
+
+vi cr.yaml
+
+https://jlp305.dynatrace-managed.com/e/<YOUR_OWN_ENVIRONMENT>/api
+
+...
+
+  env:
+  - name: ONEAGENT_ENABLE_VOLUME_STORAGE
+    value: "true"
+
+kubectl create -f cr.yaml
 
 
+=== Troubleshooting
 
+kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator
+kubectl get pods -n dynatrace
+
+
+cd /HOT-k8s
+./deploy-sockshop.sh
+
+kubectl get pods -n production -o wide
+kubectl get pods –n dev –o wide
+
+kubectl get svc -n production
+kubectl get svc -n dev
+
+kubectl create rolebinding serviceaccounts-view --clusterrole=view --group=system:serviceaccounts:production --namespace=production
+kubectl create rolebinding serviceaccounts-view --clusterrole=view --group=system:serviceaccounts:dev --namespace=dev
+
+./recycle-sockshop-frontend.sh
+
+
+== Kubenetes Dashboard Setup
+
+kubectl create clusterrolebinding dynatrace-monitoring-cluster \
+    --clusterrole dynatrace-monitoring-cluster \
+    --user=$(gcloud config get-value account)
+
+kubectl create namespace dynatrace (optional)
+kubectl apply -f dynatrace-monitoring.serviceaccount.yaml
+kubectl apply -f dynatrace-monitoring-cluster.clusterrole.yaml
+kubectl apply -f dynatrace-monitoring-cluster.clusterrolebinding.yaml
+kubectl apply -f dynatrace-monitoring-events.clusterrole.yaml
+kubectl apply -f dynatrace-monitoring-events.clusterrolebinding.yaml
+
+kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}' &
+kubectl get secret $(kubectl get sa dynatrace-monitoring -o jsonpath='{.secrets[0].name}' -n dynatrace) -o jsonpath='{.data.token}' -n dynatrace | base64 -d &
 
