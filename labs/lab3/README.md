@@ -44,5 +44,4 @@ Follow the steps from our offical documentation page
 
 https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/
 
-
-
+:arrow_up: [Back to TOC](/README.md)
