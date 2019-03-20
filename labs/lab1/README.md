@@ -8,19 +8,19 @@ You can also signup for a new Google Account if you don't have one
 
 Upon signup, you will have free credits tied to your GCP account. (12 months + 400AUD)
 
-![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture1.png)
+![GCP-Homepage](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture1.png)
 
 ### 2. Enable Kubernetes Engine API 
 
 You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API 
 
-![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture3.png)
+![k8s-Engine](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture3.png)
 
 Search for it in the top search menu if you don't see the <b>Enable your API Billing</b> option
 
 ### 3. Activate Cloud Shell
 
-![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture4.png)
+![GKE-Menu](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture4.png)
 
 Click on the Terminal Icon on the top right
 
@@ -30,7 +30,7 @@ We will start setting up our GKE Cluster
 
 ### 3. Create your GKE Cluster
 
-![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture5.png)
+![GKE-CLI](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture5.png)
 
 Choose your GKE cluster based on https://cloud.google.com/compute/docs/regions-zones/#available
 
@@ -42,7 +42,7 @@ Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
 Once completed, you will have a running GKE Cluster!
 
-![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.png)
+![GKE-CLI](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.png)
 
 Running <b>kubectl get nodes</b> will reveal number of nodes
 
