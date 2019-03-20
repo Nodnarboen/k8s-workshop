@@ -28,5 +28,15 @@ A Cloud based Terminal lookalike will appear at the bottom of the page
 
 We will start setting up our GKE Cluster 
 
+### 3. Create your GKE Cluster
+
+Choose your GKE cluster based on https://cloud.google.com/compute/docs/regions-zones/#available
+
+For example for Australia Southeast, the command will be <b>gcloud config set compute/zone australia-southeast1-a</b>
+
+Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
+
+<b>gcloud container clusters create apacbootcamp2019 --no-enable-legacy-authorization</b>
+
 :arrow_up: [Back to TOC](/README.md)
 
