@@ -19,7 +19,7 @@ In the Dynatrace console, go in Settings -> Processes and containers -> Process 
 
 Expand the Process detection rules section. 
 
-Click Add detection rule.
+Click <b>Add detection</b> rule.
 
 Select Use a process property
 
@@ -34,7 +34,7 @@ Remember the pod names have ".stable "or ".canary" in their name to distinguish 
 
 Recycle both stable and canary frontend pods. The process detection rules are applied on process startup.
 
-$ ./recycle-sockshop-frontend.sh
+<b>./recycle-sockshop-frontend.sh </b>
 
 Make sure the pods are ready 
 
