@@ -26,8 +26,11 @@ https://www.dynatrace.com/support/help/setup-and-configuration/activegate/instal
 
 ![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
 
+<i>
 [kubernetes_monitoring]
+
 kubernetes_monitoring_enabled = true
+</i>
 
 5. Restart Activegate 
 <b>service dynatracegateway stop </b>
