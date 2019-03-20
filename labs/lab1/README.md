@@ -30,6 +30,8 @@ We will start setting up our GKE Cluster
 
 ### 3. Create your GKE Cluster
 
+![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture5.png)
+
 Choose your GKE cluster based on https://cloud.google.com/compute/docs/regions-zones/#available
 
 For example for Australia Southeast, the command will be <b>gcloud config set compute/zone australia-southeast1-a</b>
