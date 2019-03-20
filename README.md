@@ -4,7 +4,7 @@ This repository contains labs for the k8s Hands-On Bootcamp March 2019. We will 
 
 ## Contents
 
-[**Lab 1:** Setup your GKE Environment](/gke)
+[**Lab 1:** Setup your GKE Environment](/labs/lab1)
 
 [**Lab 2:** Install k8s OneAgent Operator](/k8s)
 
