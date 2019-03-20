@@ -10,17 +10,15 @@ For our Hands-On, you will need to setup an Environment Activegate first.
 
 Choose the zone based on where your cluster is running from.
 
-Change the Boot Disk Image to be Ubuntu 16.04
+Change the Boot Disk Image to be <b>Ubuntu 16.04</b> matching requirements as per below
 
 https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/activegate-hardware-and-system-requirements/
 
 2. One VM is running, click on dropdown button and select <b>open in browser window"</b> 
 
-![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
+![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
 3. Switch to root user with <b> sudo su </b> and run Activegate installation steps 
-
-![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
 https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server
 
