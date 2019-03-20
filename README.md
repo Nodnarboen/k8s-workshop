@@ -9,3 +9,11 @@ This repository contains labs for the k8s Hands-On Bootcamp March 2019. We will 
 [**Lab 2:** Install k8s OneAgent Operator](/labs/lab2)
 
 [**Lab 3:** Setup k8s Dashboard](/labs/lab3)
+
+[**Lab 4:** k8s Labels & Annotations](/labs/lab4)
+
+[**Lab 5:** Container Environment Variables](/labs/lab5)
+
+[**Lab 6:** Process Group Naming & Service Naming for k8s](/labs/lab6)
+
+[**Lab 7:** Process Detection for Canary Deployments](/labs/lab7)
