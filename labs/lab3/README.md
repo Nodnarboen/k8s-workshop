@@ -4,6 +4,8 @@ For our Hands-On, you will need to setup an Environment Activegate first.
 
 ### 1. Install an Environment Activegate
 
+![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
+
 1. Default value of 1vCPU, 3.75GB will be sufficient for the Activegate. 
 
 Choose the zone based on where your cluster is running from.
@@ -14,11 +16,17 @@ https://www.dynatrace.com/support/help/setup-and-configuration/activegate/instal
 
 2. One VM is running, click on dropdown button and select <b>open in browser window"</b> 
 
+![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
+
 3. Switch to root user with <b> sudo su </b> and run Activegate installation steps 
+
+![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
 https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server
 
 4. As we are running this with S162, you will need to set <b>Kubernetes_monitoring_enabled</b> to true in /var/lib/dynatrace/gateway/config/custom.properties
+
+![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
 
 [kubernetes_monitoring]
 kubernetes_monitoring_enabled = true
