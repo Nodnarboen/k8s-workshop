@@ -32,8 +32,10 @@ https://www.dynatrace.com/support/help/setup-and-configuration/activegate/instal
 kubernetes_monitoring_enabled = true
 </i>
 
-5. Restart Activegate 
+5. Restart Activegate with
+
 <b>service dynatracegateway stop </b>
+
 <b>service dynatracegateway start </b>
 
 ### 2. Setup the K8S Overview Dashboard
