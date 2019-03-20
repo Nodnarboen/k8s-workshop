@@ -40,5 +40,11 @@ Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
 <b>gcloud container clusters create apacbootcamp2019 --no-enable-legacy-authorization</b>
 
+Once completed, you will have a running GKE Cluster!
+
+![alt text](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.png)
+
+Running <b>kubectl get nodes</b> will reveal number of nodes
+
 :arrow_up: [Back to TOC](/README.md)
 
