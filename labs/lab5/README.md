@@ -12,6 +12,7 @@ After saving, you will need to re-apply the change.
 kubectl apply –f front-end.yml
 
 cd /HOT-k8s/
+
 ./recycle-sockshop-frontend.sh
 </i>
 
