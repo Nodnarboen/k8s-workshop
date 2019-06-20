@@ -8,6 +8,8 @@ You can also signup for a new Google Account if you don't have one
 
 Upon signup, you will have free credits tied to your GCP account. (12 months + 400AUD)
 
+You can login to your GCP console https://console.cloud.google.com/home/.
+
 ![GCP-Homepage](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture1.png)
 
 ### 2. Enable Kubernetes Engine API 
