@@ -40,11 +40,11 @@ For example for Australia Southeast, the command will be <b>gcloud config set co
 
 Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
-<b>gcloud container clusters create PerformGo2019 --no-enable-legacy-authorization</b>
+<b>gcloud container clusters create performgo2019 --no-enable-legacy-authorization</b>
 
 For an Containerd cluster, use the following command
 
-<b>gcloud container clusters create PerformGo2019 --image-type=cos_containerd --cluster-version=1.11</b>
+<b>gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11</b>
 
 Once completed, you will have a running GKE Cluster!
 
