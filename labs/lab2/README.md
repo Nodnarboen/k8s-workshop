@@ -14,6 +14,8 @@ https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google
 
 3. If you need got an error regarding the token, you can use <b>kubectl replace -f secret </b> to remove the current secret
 
+4. To delete existing pods, run <b>kubectl delete --all pods --namespace=dynatrace</b>
+
 :arrow_up: [Back to TOC](/README.md)
 
 
