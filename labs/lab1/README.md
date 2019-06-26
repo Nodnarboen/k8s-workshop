@@ -44,7 +44,7 @@ Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
 For an Containerd cluster, use the following command
 
-<b>gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11 --addons=Istio --istio-config=auth=MTLS_PERMISSIVE \</b>
+<b>gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11 --addons=Istio --istio-config=auth=MTLS_PERMISSIVE </b>
 
 Once completed, you will have a running GKE Cluster!
 
