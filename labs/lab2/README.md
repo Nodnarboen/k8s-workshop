@@ -6,6 +6,9 @@ https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google
 
 ### Pointers / Troubleshooting Tips:
 
+Offical steps are here
+https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/
+
 1. When editing the cr.yml, make sure the the <b>indentation alignment</b> are correct.
 
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
