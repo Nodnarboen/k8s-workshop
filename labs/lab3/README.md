@@ -22,6 +22,24 @@ https://www.dynatrace.com/support/help/setup-and-configuration/activegate/instal
 
 https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server
 
+4. As we are running this with Dev, disable cert validation in /var/lib/dynatrace/gateway/config/custom.properties
+
+![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
+
+<i>
+[http.client.external]
+
+hostname-verification = no
+
+certificate-validation = no
+</i>
+
+5. Restart Activegate with
+
+<b>service dynatracegateway stop </b>
+
+<b>service dynatracegateway start </b>
+
 ### 2. Setup the K8S Overview Dashboard
 
 Follow the steps from our offical documentation page
