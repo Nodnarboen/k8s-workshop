@@ -52,5 +52,5 @@ Once completed, you will have a running GKE Cluster!
 
 Running <b>kubectl get nodes</b> will reveal number of nodes
 
-:arrow_up: [Back to TOC](/README.md) :arrow_right: [Back to TOC](/README.md)
+:arrow_right: [Next](../lab2/README.md)  :arrow_up: [Back to TOC](/README.md) 
 
