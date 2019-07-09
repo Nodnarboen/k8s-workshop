@@ -19,6 +19,6 @@ https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google
 
 4. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods
 
-:arrow_up: [Back to TOC](/README.md)
+:arrow_right: [Next](../lab3/README.md)  :arrow_up: [Back to TOC](/README.md)
 
 
