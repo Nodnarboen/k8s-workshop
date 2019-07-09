@@ -42,7 +42,7 @@ Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
 <b>gcloud container clusters create performgo2019 --no-enable-legacy-authorization</b>
 
-To use Containerd as a container runtime and to have Istio enabled in GKE, use the following command
+To use Containerd as a container runtime in GKE, use the following command
 
 <b>gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11  </b>
 
