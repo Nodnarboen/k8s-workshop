@@ -54,6 +54,6 @@ You can now apply Stable vs Canary Multi-dimensional analysis views.
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture27.png)
 
-:arrow_up: [Back to TOC](/README.md)
+:arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../la6/README.md) 
 
 
