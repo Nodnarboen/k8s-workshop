@@ -36,11 +36,17 @@ We will start setting up our GKE Cluster
 
 Choose your GKE cluster based on https://cloud.google.com/compute/docs/regions-zones/#available
 
-For example for Australia Southeast, the command will be <b>gcloud config set compute/zone australia-southeast1-a</b>
+For example for Australia Southeast, the command will be 
+
+```bash
+<b>gcloud config set compute/zone australia-southeast1-a</b>
+```
 
 Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 
+```bash
 <b>gcloud container clusters create performgo2019 --no-enable-legacy-authorization</b>
+```
 
 To use Containerd as a container runtime in GKE, use the following command
 
