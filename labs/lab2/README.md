@@ -1,4 +1,4 @@
-# Install Dynatrace OneAgent Operator for Kubernetes 
+# Install Dynatrace OneAgent Operator for Kubernetes (Containerd)
 
 Follow the steps from our offical documentation page
 
