@@ -48,7 +48,7 @@ Create your GKE cluster named <b>apacbootcamp2019</b> with the following command
 gcloud container clusters create performgo2019 --no-enable-legacy-authorization
 ```
 
-To use Containerd as a container runtime in GKE, use the following command
+OR you can use Containerd as a container runtime in GKE, use the following command
 
 ```bash
 gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11 
