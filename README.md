@@ -12,7 +12,7 @@ This repository contains labs for the k8s Hands-On Bootcamp March 2019. We will 
 
 [**Lab 4:** k8s Labels & Annotations](/labs/lab4)
 
-[**Lab 5:** Container Environment Variables](/labs/lab5)
+[**Lab 5:** Container Environment Variables](/labs/lab5) (optional) 
 
 [**Lab 6:** Process Group Naming & Service Naming for k8s](/labs/lab6)
 
