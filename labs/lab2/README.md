@@ -15,7 +15,7 @@ https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google
 
 2. Take note of <b>not swapping</b> the declaration of the API and PaaS token in the secret. 
 
-3. If you need got an error regarding the token, you can use <b>kubectl replace -f secret </b> to remove the current secret
+3. If you need got an error regarding the token, you can use <b>kubectl replace -f secret oenagent</b> to remove the current secret
 
 4. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods
 
