@@ -17,7 +17,7 @@ https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google
 
 3. If you need got an error regarding the token, you can use <b>kubectl replace -f secret oneagent</b> to remove the current secret
 
-4. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods
+4. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods. This will cycle through the pods and you will have new pod instances.
 
 :arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../lab1/README.md)   :arrow_right: [Next](../lab3/README.md)  
 
