@@ -44,17 +44,13 @@ For example for Australia Southeast, the command will be
 gcloud config set compute/zone australia-southeast1-a
 ```
 
-Create your GKE cluster named <b>performgo2019</b> with the following command
+Create your GKE cluster named <b>performgo2019</b> with Containerd as a container runtime in GKE with the following command
 
 ```bash
-gcloud container clusters create performgo2019 --no-enable-legacy-authorization
+gcloud container clusters create performgo2019 --image-type=cos_containerd 
 ```
 
-OR you can use Containerd as a container runtime in GKE, use the following command
-
-```bash
-gcloud container clusters create performgo2019 --image-type=cos_containerd --cluster-version=1.11 
-```
+** Note that it's possible to run Docker as a runtime but we have decided to use Containerd to show Dynatrace's support for bleeding edge technologies
 
 Once completed, you will have a running GKE Cluster!
 
