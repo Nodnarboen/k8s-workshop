@@ -2,9 +2,9 @@
 
 As per the official instructions [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/) for the Kubernetes integration, you will need to setup an Environment Activegate first.
 
-### 1. Install an Environment Activegate
+### 1. Create infrastructure for Activegate
 
-1. Within the Google Cloud Shell, enter the following to create a new Compute Engine VM Instance for our Activegate. 
+1.1 Within the Google Cloud Shell, enter the following to create a new Compute Engine VM Instance for our Activegate. 
 
 ``` bash
 gcloud compute instances create dynatrace-activegate \
@@ -13,7 +13,7 @@ gcloud compute instances create dynatrace-activegate \
 ```
 ![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
 
-2. Once VM is running, click on the "+" icon within Google Cloud Shell Navigation bar and add a new session with the project. 
+1.2 Once VM is running, click on the "+" icon within Google Cloud Shell Navigation bar and add a new session with the project. 
 
 ![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
@@ -23,19 +23,33 @@ Enter the below to ssh into new session to connect to the new VM.
 gcloud compute ssh dynatrace-activegate
 ```
 
-3. Switch to root user with <b> sudo su </b> and run Activegate installation steps 
+1.3 Install Activegate
 
-https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server
+Switch to root user with the following command:
 
-4. As we are running this with Dev, disable cert validation in /var/lib/dynatrace/gateway/config/custom.properties
+```bash
+sudo su
+```
 
-![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
+Follow [these](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) steps to setup the Activegate
+
+4. As we are running this with Dev, cert validation will need to be disabled
+
+Edit the custom properties file of the Activegate with the following command
+
+``` bash
+vi /var/lib/dynatrace/gateway/config/custom.properties
+```
+Add in the below command in the file
 
 ``` bash
 [http.client.external]
 hostname-verification = no
 certificate-validation = no
 ```
+
+![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
+
 
 5. Restart Activegate with following commands
 
