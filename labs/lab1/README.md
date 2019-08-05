@@ -20,7 +20,7 @@ You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API.
 
 You should be prompted to the billing page while setting up your GKE instance. 
 
-If not, you can follow the steps <a https://support.google.com/googleapi/answer/6158867?hl=en> here </a>
+If not, you can follow the steps [here](https://support.google.com/googleapi/answer/6158867?hl=en)
 
 ### 3. Activate Cloud Shell
 
