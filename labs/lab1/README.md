@@ -14,7 +14,7 @@ You can login to your GCP console [here](https://console.cloud.google.com/home/)
 
 ### 2. Enable Kubernetes Engine API 
 
-You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API. Step could be found [here](https://support.google.com/googleapi/answer/6158867?hl=en)
+You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API. Steps could be found [here](https://support.google.com/googleapi/answer/6158867?hl=en)
 
 ![k8s-Engine](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture3.png)
 
