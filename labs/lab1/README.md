@@ -14,11 +14,13 @@ You can login to your GCP console [here](https://console.cloud.google.com/home/)
 
 ### 2. Enable Kubernetes Engine API 
 
-You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API. Steps could be found <a href="https://support.google.com/googleapi/answer/6158867?hl=en">here</a>. 
+You will also need to <b>Enable your API Billing</b> with Kubernetes Engine API. 
 
 ![k8s-Engine](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture3.png)
 
-Search for it in the top search menu if you don't see the <b>Enable your API Billing</b> option
+You should be prompted to the billing page while setting up your GKE instance. 
+
+If not, you can follow the steps <a https://support.google.com/googleapi/answer/6158867?hl=en> here </a>
 
 ### 3. Activate Cloud Shell
 
