@@ -4,6 +4,16 @@ Follow the steps from our offical documentation page
 
 https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/
 
+Please make sure use the following as we are using Containerd + GKE:
+
+``` bash
+  env:
+  - name: ONEAGENT_CONTAINER_STORAGE_PATH
+    value: /home/
+    name: ONEAGENT_ENABLE_VOLUME_STORAGE
+    value: "true"
+```
+
 ### Pointers / Troubleshooting Tips:
 
 Offical steps are here
