@@ -4,19 +4,24 @@ As per the official instructions [here](https://www.dynatrace.com/support/help/t
 
 ### 1. Install an Environment Activegate
 
+1. Within the Google Cloud Shell, enter the following to create a new Compute Engine VM Instance for our Activegate. 
+
+``` bash
+gcloud compute instances create dynatrace-activegate \
+--image-family ubuntu-1604-lts \
+--image-project ubuntu-os-cloud	
+```
 ![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
 
-1. Default value of 1vCPU, 3.75GB will be sufficient for the Activegate. 
-
-Choose the zone based on where your cluster is running from.
-
-Change the Boot Disk Image to be <b>Ubuntu 16.04</b> matching requirements as per below
-
-https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/activegate-hardware-and-system-requirements/
-
-2. One VM is running, click on dropdown button and select <b>open in browser window"</b> 
+2. Once VM is running, click on the "+" icon within Google Cloud Shell Navigation bar and add a new session with the project. 
 
 ![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
+
+Enter the below to ssh into new session to connect to the new VM.
+
+``` bash
+gcloud compute ssh dynatrace-activegate
+```
 
 3. Switch to root user with <b> sudo su </b> and run Activegate installation steps 
 
@@ -26,24 +31,22 @@ https://www.dynatrace.com/support/help/setup-and-configuration/activegate/instal
 
 ![custom-prop](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture10.png)
 
-<i>
+``` bash
 [http.client.external]
-
 hostname-verification = no
-
 certificate-validation = no
-</i>
+```
 
-5. Restart Activegate with
+5. Restart Activegate with following commands
 
-<b>service dynatracegateway stop </b>
+``` bash
+service dynatracegateway stop 
 
-<b>service dynatracegateway start </b>
+service dynatracegateway start
+```
 
 ### 2. Setup the K8S Overview Dashboard
 
-Follow the steps from our offical documentation page
-
-https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/
+Follow the steps from our offical [documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/) to setup the K8S integration
 
 :arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../lab2/README.md)   :arrow_right: [Next](../lab4/README.md)  
