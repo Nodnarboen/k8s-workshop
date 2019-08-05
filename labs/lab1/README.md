@@ -44,7 +44,7 @@ For example for Australia Southeast, the command will be
 gcloud config set compute/zone australia-southeast1-a
 ```
 
-Create your GKE cluster named <b>performgo2019</b> with Containerd as a container runtime in GKE with the following command
+Create your GKE cluster named <b>performgo2019</b> with Containerd as a container runtime** in GKE with the following command
 
 ```bash
 gcloud container clusters create performgo2019 --image-type=cos_containerd 
