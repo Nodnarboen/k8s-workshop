@@ -4,7 +4,7 @@ Follow the steps from our offical documentation page
 
 https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/
 
-Please make sure use the following as we are using Containerd + GKE:
+Please make sure to use the following for the cr.yaml as we are using Containerd + GKE:
 
 ``` bash
   env:
