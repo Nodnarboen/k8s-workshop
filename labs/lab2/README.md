@@ -14,14 +14,14 @@ Please make sure to use the following for the cr.yaml as we are using Containerd
     value: "true"
 ```
 
+![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
+
 ### Pointers / Troubleshooting Tips:
 
 Offical steps are here
 https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/
 
 1. When editing the cr.yml, make sure the the <b>indentation alignment</b> are correct.
-
-![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
 
 2. Take note of <b>not swapping</b> the declaration of the API and PaaS token in the secret. 
 
