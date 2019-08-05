@@ -1,6 +1,6 @@
 # Setting up your Kubernetes Overview Page
 
-For our Hands-On, you will need to setup an Environment Activegate first.
+As per the offical instructions [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/) for the Kubernetes integration, you will need to setup an Environment Activegate first.
 
 ### 1. Install an Environment Activegate
 
