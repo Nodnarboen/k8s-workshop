@@ -26,5 +26,7 @@ Please make sure to use the following for the <b>cr.yaml</b> as we are using Con
 
 Offical troubleshooting page could be found [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/)
 
+If everything is working, you will see 
+
 :arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../lab1/README.md)   :arrow_right: [Next](../lab3/README.md)  
 
