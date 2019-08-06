@@ -17,10 +17,10 @@ gcloud compute instances create dynatrace-activegate \
 
 ![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
-Enter the below to ssh into new session to connect to the new VM.
+Enter the below to ssh into new session to connect to the new V with the zone you created in lab 1. For example,
 
 ``` bash
-gcloud compute ssh dynatrace-activegate
+gcloud compute ssh dynatrace-activegate --zone australia-southeast1-a
 ```
 
 1.3 Install Activegate
