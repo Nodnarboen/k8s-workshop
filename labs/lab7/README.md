@@ -2,7 +2,9 @@
 
 ### 1. Deploy the Canary Release 
 
+```bash
  ./deploy-canary.sh
+```
 
 Execute <b>kubectl get pods -n production -o wide</b> and you will see you now have both stable and canary releases running
 
