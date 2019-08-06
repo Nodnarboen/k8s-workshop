@@ -33,7 +33,11 @@ sudo su
 
 Follow these [official steps](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) steps to setup the Activegate
 
-1.4 As we are running this with Dev, cert validation will need to be disabled
+Once completed, you should see Activegate under Deployment Status.
+
+![Activegate-connected](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.1.png)
+
+1.4 Because GCP's tight security rules, cert validation will need to be disabled
 
 Edit the custom properties file of the Activegate with the following command
 
