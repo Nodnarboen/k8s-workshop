@@ -6,7 +6,7 @@ For our Hands-On, you will need to run the sample application sock-shop
 
 ```bash
 git clone https://github.com/nodnarboen/HOT-k8s.git
-cd /HOT-k8s
+cd HOT-k8s
 ./deploy-sockshop.sh
 ```
 
