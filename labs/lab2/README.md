@@ -2,16 +2,6 @@
 
 Follow the installation steps from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
-Please make sure to use the following for the <b>cr.yaml</b> as we are using Containerd + GKE:
-
-``` bash
-  env:
-  - name: ONEAGENT_CONTAINER_STORAGE_PATH
-    value: /home/
-    name: ONEAGENT_ENABLE_VOLUME_STORAGE
-    value: "true"
-```
-
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
 
 ### Pointers / Troubleshooting Tips:
@@ -26,7 +16,9 @@ Please make sure to use the following for the <b>cr.yaml</b> as we are using Con
 
 Official troubleshooting page could be found [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/)
 
-If everything is working, you will see 
+If everything is working, you will see the hosts appearing under Hosts from clicking Hosts under the left navigation bar.
+
+![GKE-Hosts](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.1.png)
 
 :arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../lab1/README.md)   :arrow_right: [Next](../lab3/README.md)  
 
