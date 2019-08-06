@@ -31,9 +31,9 @@ Switch to root user with the following command:
 sudo su
 ```
 
-Follow [these](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) steps to setup the Activegate
+Follow these [official steps](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) steps to setup the Activegate
 
-4. As we are running this with Dev, cert validation will need to be disabled
+1.4 As we are running this with Dev, cert validation will need to be disabled
 
 Edit the custom properties file of the Activegate with the following command
 
