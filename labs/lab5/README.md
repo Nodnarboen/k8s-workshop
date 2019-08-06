@@ -8,13 +8,11 @@ Add some Environment Variables to the /HOT-k8s/manifests/sockshop-app/production
 
 After saving, you will need to re-apply the change.
 
-<i>
+```bash
 kubectl apply –f front-end.yml
-
 cd /HOT-k8s/
-
 ./recycle-sockshop-frontend.sh
-</i>
+```
 
 ### 2. Validate
 
