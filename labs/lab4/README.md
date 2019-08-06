@@ -4,13 +4,11 @@ For our Hands-On, you will need to run the sample application sock-shop
 
 ### 1. Clone and Run the Sample App sock-shop
 
+```bash
 git clone https://github.com/nodnarboen/HOT-k8s.git
-
-<i>
 cd /HOT-k8s
-
 ./deploy-sockshop.sh
-</i>
+```
 
 Once running, you can go to /HOT-k8s/manifests/sockshop-app/production/front-end.yml to view the content in it
 
