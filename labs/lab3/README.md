@@ -37,7 +37,7 @@ Once completed, you should see Activegate under Deployment Status.
 
 ![Activegate-connected](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.1.png)
 
-1.4 Because GCP's tight security rules, cert validation will need to be disabled
+1.4 Because [security reasons](https://www.dynatrace.com/support/help/shortlink/activegate-configuration-trusted-root-certs), disabling cert validation is the easiest way for our Hands-On
 
 Edit the custom properties file of the Activegate with the following command
 
