@@ -1,6 +1,6 @@
 # Hands On Training for PerformGo! APAC K8S 
 
-This repository contains labs for the k8s Hands-On Bootcamp March 2019. We will be using Google Kubernetes Engine (GKE) for this hands-on but this will work on other platforms as well. 
+This repository contains labs for the PerformGo! Hands-On Kubernetes Session. We will be using Google Kubernetes Engine (GKE) for this hands-on but this will work on other platforms as well. 
 
 ## Contents
 
