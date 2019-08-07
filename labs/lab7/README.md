@@ -42,10 +42,6 @@ Make sure the pods are ready
 
 <b>kubectl get deployments -n production -l tier=frontend</b>
 
-Merge the services at Settings -> Server-side service monitoring -> Merge Service
-
-![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture26.png)
-
 ### 3. Validate
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture25.png)
