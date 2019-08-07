@@ -56,9 +56,13 @@ Settings -> Merge Service monitoring -> Create merged service
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture25.png)
 
-With the services merged as one, you can now apply Stable vs Canary Multi-dimensional analysis views based on splittings 
+With the services merged as one, you can now view monitor Stable vs Canary response
+
+Create Multi-dimensional Analysis view by selecting "<b>Create Chart</b>" 
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture26.png)
+
+Choose <b>Response Time - Server</b> and select <b>Service Instance</b> as Dimension Splitting
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture27.png)
 
