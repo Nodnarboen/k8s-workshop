@@ -6,7 +6,7 @@
  ./deploy-canary.sh
 ```
 
-Execute <b>kubectl get pods -n production -o wide</b> and you will see you now have both stable and canary releases running
+Execute <b>kubectl get pods -n production -o wide</b> and you will see you now have both <b>stable and canary releases running for the front-end service</b>
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture21.png)
 
