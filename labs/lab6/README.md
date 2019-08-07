@@ -4,11 +4,11 @@
 
 Go in Settings -> Processes and containers -> Process group naming and click Add a new rule
 
-Provide a name to the rule, for example : Kubernetes Project.Namespace.Container
+Provide a name to the rule, for example : <b>Kubernetes Project.Namespace.Container</b>
 
-Enter this format : k8s-{ProcessGroup:Kubernetes:pipeline.project}.{ProcessGroup:KubernetesNamespace}.{ProcessGroup:KubernetesContainerName}
+Enter this format : <b>k8s-{ProcessGroup:Kubernetes:pipeline.project}.{ProcessGroup:KubernetesNamespace}.{ProcessGroup:KubernetesContainerName}</b>
 
-In the conditions drop-down, select the property "Kubernetes namespace" and the condition "exists"
+In the conditions drop-down, select the property "<b>Kubernetes namespace</b>" and the condition "<b>exists</b>"
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture15.png)
 
@@ -28,11 +28,11 @@ Once working, you can validate the change in Dynatrace
 
 Go in Settings -> Server-side service monitoring -> Service naming rules and click Add a new rule
 
-Provide a name to the rule, for example : Kubernetes Project.Namespace.Container
+Provide a name to the rule, for example : <b>Kubernetes Project.Namespace.Container</b>
 
-Enter this format : {Service:DetectedName}.{ProcessGroup:KubernetesNamespace}
+Enter this format : <b>{Service:DetectedName}.{ProcessGroup:KubernetesNamespace}</b>
 
-In the conditions drop-down, select the property "Kubernetes namespace" and the condition "exists"
+In the conditions drop-down, select the property "<b>Kubernetes namespace</b>" and the condition "<b>exists</b>"
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture18.png)
 
