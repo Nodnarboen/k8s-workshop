@@ -42,6 +42,16 @@ Make sure the pods are ready
 
 <b>kubectl get deployments -n production -l tier=frontend</b>
 
+Within Dynatrace, you can see that the Process Groups have been merged.
+
+![Process-Group-Merged](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture24.1.png)
+
+The services are still detected as individual services and can be merged as well.
+
+Settings -> Merge Service monitoring -> Create merged service
+
+![Service-Merged](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture24.2.png)
+
 ### 3. Validate
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture25.png)
