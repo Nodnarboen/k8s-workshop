@@ -56,7 +56,7 @@ Settings -> Merge Service monitoring -> Create merged service
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture25.png)
 
-You can now apply Stable vs Canary Multi-dimensional analysis views.
+With the services merged as one, you can now apply Stable vs Canary Multi-dimensional analysis views based on splittings 
 
 ![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture26.png)
 
