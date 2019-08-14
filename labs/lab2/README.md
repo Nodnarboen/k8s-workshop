@@ -2,7 +2,7 @@
 
 Before running the Oneagent Operator, please make sure that deep monitoring for Containerd Monitoring is enabled
 
-Go to Settings -> Processes and Container -> Container Monitoring
+Go to <b>Settings -> Processes and Container -> Container Monitoring</b>
 
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.1.png)
 
