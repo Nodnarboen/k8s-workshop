@@ -18,4 +18,4 @@ This repository contains labs for the PerformGo! Hands-On Kubernetes Session. We
 
 [**Lab 7:** Process Detection for Canary Deployments](/labs/lab7)
 
-To delete the entire hands-on, proceed to delete the Google projectbased on instructions [here](https://cloud.google.com/go/getting-started/delete-tutorial-resources)
+To delete the entire hands-on, proceed to delete your GCP project based on instructions [here](https://cloud.google.com/go/getting-started/delete-tutorial-resources)
