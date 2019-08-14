@@ -17,3 +17,5 @@ This repository contains labs for the PerformGo! Hands-On Kubernetes Session. We
 [**Lab 6:** Process Group Naming & Service Naming for k8s](/labs/lab6)
 
 [**Lab 7:** Process Detection for Canary Deployments](/labs/lab7)
+
+To delete the entire hands-on, proceed to delete the Google projectbased on instructions [here](https://cloud.google.com/go/getting-started/delete-tutorial-resources)
