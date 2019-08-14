@@ -1,5 +1,11 @@
 # Install Dynatrace OneAgent Operator for Kubernetes (Containerd)
 
+Before running the Oneagent Operator, please make sure that deep monitoring for Containerd Monitoring is enabled
+
+Go to Settings -> Processes and Container -> Container Monitoring
+
+![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.1.png)
+
 Follow the installation steps from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
