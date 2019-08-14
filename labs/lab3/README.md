@@ -9,8 +9,8 @@ As per the official instructions [here](https://www.dynatrace.com/support/help/t
 ``` bash
 gcloud compute instances create dynatrace-activegate \
 --image-family ubuntu-1604-lts \
---image-project ubuntu-os-cloud	\
---zone australia-southeast1-a
+--image-project ubuntu-os-cloud \
+--zone australia-southeast1-a \
 ```
 ![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
 
