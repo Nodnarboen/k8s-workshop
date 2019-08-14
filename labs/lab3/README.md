@@ -9,7 +9,8 @@ As per the official instructions [here](https://www.dynatrace.com/support/help/t
 ``` bash
 gcloud compute instances create dynatrace-activegate \
 --image-family ubuntu-1604-lts \
---image-project ubuntu-os-cloud	
+--image-project ubuntu-os-cloud	\
+--zone australia-southeast1-a
 ```
 ![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
 
@@ -17,7 +18,7 @@ gcloud compute instances create dynatrace-activegate \
 
 ![VM-SSH](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture9.png)
 
-Enter the below to ssh into new session to connect to the new V with the zone you created in lab 1. For example,
+Enter the below to ssh into new session to connect to the VM <b>with the zone</b> you created in lab 1. For example,
 
 ``` bash
 gcloud compute ssh dynatrace-activegate --zone australia-southeast1-a
