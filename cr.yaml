@@ -7,7 +7,7 @@ metadata:
   namespace: dynatrace
 spec:
   # dynatrace api url including `/api` path at the end
-  apiUrl: https://jlp305.dynatrace-managed.com/e/<AttendeeID>-K8S-PerformGo-2019/api
+  apiUrl: https://jlp305.dynatrace-managed.com/e/{{attendeeID}}-k8s-performgo-2019/api
   # disable certificate validation checks for installer download and API communication
   skipCertCheck: false
   # name of secret holding `apiToken` and `paasToken`
@@ -31,7 +31,7 @@ spec:
   # environment variables for oneagent (optional)
   env:
   - name: ONEAGENT_ENABLE_VOLUME_STORAGE
-    value: "TRUE"  
+    value: "true"  
   # resource settings for oneagent pods (optional)
   # consumption of oneagent heavily depends on the workload to monitor
   # please adjust values accordingly
