@@ -18,7 +18,7 @@ Install OneAgent Operator
  ./HOT-k8s/install-oneagent-operator.sh
 ```
 
-Locate your AttendeeID from your Dynatrace environment. It can be found in this format <b><AttendeeID></b>-k8s-performgo-2019
+Locate your AttendeeID from your Dynatrace environment. It can be found in this format <b>AttendeeID</b>-k8s-performgo-2019
 
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
