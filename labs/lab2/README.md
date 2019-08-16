@@ -1,10 +1,8 @@
-### Download Sample Application from Git Repo
+Download code from Git repository
 
-1. Clone and Run the Sample App sock-shop
+``` bash
 git clone https://github.com/nodnarboen/HOT-k8s.git
-cd HOT-k8s
-./deploy-sockshop.sh
-
+```
 
 # Install Dynatrace OneAgent Operator for Kubernetes (Containerd)
 
