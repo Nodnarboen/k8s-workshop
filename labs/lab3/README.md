@@ -4,13 +4,8 @@ As per the official instructions [here](https://www.dynatrace.com/support/help/t
 
 ### 1. Create infrastructure for Activegate
 
-1.1 Within the Google Cloud Shell, enter the following to create a new Compute Engine VM Instance for our Activegate. 
-
 ``` bash
-gcloud compute instances create dynatrace-activegate \
---image-family ubuntu-1604-lts \
---image-project ubuntu-os-cloud \
---zone australia-southeast1-a \
+./setup-activegate.sh
 ```
 ![VM-Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture8.png)
 
