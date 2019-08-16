@@ -27,6 +27,8 @@ You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</
 5. Get a Platform-as-a-Service token. You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b>
 6. Enter your PaaS token to the screen prompt.
 
+That's it! Dynatrace is now monitoring your GKE Environment!
+
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
