@@ -5,7 +5,9 @@ sudo /bin/sh Dynatrace-ActiveGate-Linux-x86-1.173.298.sh
 
 sleep 10s
 
-sudo cat <<EOF >/var/lib/dynatrace/gateway/config/custom.properties
+sudo chmod 777 -Rf /var/lib/dynatrace/gateway/config/
+
+sudo cat <<EOF > /var/lib/dynatrace/gateway/config/custom.properties
 [http.client.external]
 hostname-verification = no
 certificate-validation = no
