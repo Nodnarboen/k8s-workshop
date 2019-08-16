@@ -20,6 +20,10 @@ Install OneAgent Operator
 
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
+1. Get an API token for the Dynatrace API with the scope Access problem and event feed, metrics, and topology. You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</b> 
+
+Get a Platform-as-a-Service token. You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b> 
+
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
 
 ### Pointers / Troubleshooting Tips:
