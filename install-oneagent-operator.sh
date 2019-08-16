@@ -1,10 +1,23 @@
+#!/bin/bash
+
+read -p 'AttendeeID: ' attendeeID
+read -p 'API Token: ' apitoken
+read -p 'PaaS Token: ' paastoken
+
+
 kubectl create clusterrolebinding cluster-admin-binding \
-  --clusterrole=cluster-admin --user=$(gcloud config get-value account)
+  --clusterrole cluster-admin \
+  --user $(gcloud config get-value account) \
   
 kubectl create namespace dynatrace
 
-LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneagent-operator/releases/latest | grep tag_name | cut -d '"' -f 4)
+kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/v0.3.1/deploy/kubernetes.yaml
 
-kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml
+kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=$apitoken" --from-literal="paasToken=$paastoken"
 
-kubectl create -f cr.yaml
+# read the yml template from a file and substitute the string 
+# {{MYVARNAME}} with the value of the MYVARVALUE variable
+template=`cat "cr.yaml" | sed "s/{{attendeeID}}/$attendeeID/g"`
+
+# apply the yml with the substituted value
+echo "$template" | kubectl create -f - 
