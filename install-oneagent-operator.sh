@@ -24,5 +24,3 @@ template=`cat "cr.yaml" | sed "s/{{attendeeID}}/$attendeeID/g"`
 
 # apply the yml with the substituted value
 echo "$template" | kubectl create -f -
-
-./setup-k8s-ui.sh
