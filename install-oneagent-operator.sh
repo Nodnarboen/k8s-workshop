@@ -4,9 +4,9 @@ read -p 'AttendeeID: ' attendeeID
 read -p 'API Token: ' apitoken
 read -p 'PaaS Token: ' paastoken
 
-export attendID
-export apitoken
-export paastoken
+export attendID=$attendID
+export apitoken=$apitoken
+export paastoken=$paastoken
 
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole cluster-admin \
