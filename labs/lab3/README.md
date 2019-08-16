@@ -17,7 +17,7 @@ Once completed, you should see Activegate under Deployment Status.
 ### 2. Setup the K8S Overview Dashboard
 
 ``` bash
-./connect-k8s-ui.sh
+./setup-k8s-ui.sh
 ```
 
 Follow the steps from our offical [documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/kubernetes/installation-and-operation/further-integrations/connect-your-kubernetes-clusters-to-dynatrace/) to setup the K8S integration
