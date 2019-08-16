@@ -2,6 +2,8 @@
 
 This repository contains labs for the PerformGo! Hands-On Kubernetes Session. We will be using Google Kubernetes Engine (GKE) for this hands-on but this will work on other platforms as well. 
 
+For the purposes of the Hands-On, we will automate and make the steps seamless for the participants
+
 ## Contents
 
 [**Lab 1:** Setup your GKE Environment](/labs/lab1)
