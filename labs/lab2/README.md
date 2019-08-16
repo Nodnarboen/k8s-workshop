@@ -6,7 +6,7 @@ Go to <b>Settings -> Processes and Container -> Container Monitoring</b>
 
 ![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture6.1.png)
 
-Download code from Git repository
+Download codebase from Git repository
 
 ``` bash
 git clone https://github.com/nodnarboen/HOT-k8s.git
