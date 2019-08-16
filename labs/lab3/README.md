@@ -8,7 +8,7 @@ As per the official instructions [here](https://www.dynatrace.com/support/help/t
 ./setup-activegate.sh
 ```
 
-Follow these [official steps](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) steps to setup the Activegate
+Automation has been build around these [official steps](https://www.dynatrace.com/support/help/setup-and-configuration/activegate/installation/install-an-environment-activegate/#expand-103if-youre-on-an-ubuntu-server) with the above command
 
 Once completed, you should see Activegate under Deployment Status.
 
