@@ -4,6 +4,9 @@ read -p 'AttendeeID: ' attendeeID
 read -p 'API Token: ' apitoken
 read -p 'PaaS Token: ' paastoken
 
+export attendID
+export apitoken
+export paastoken
 
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole cluster-admin \
@@ -20,4 +23,6 @@ kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=$ap
 template=`cat "cr.yaml" | sed "s/{{attendeeID}}/$attendeeID/g"`
 
 # apply the yml with the substituted value
-echo "$template" | kubectl create -f - 
+echo "$template" | kubectl create -f -
+
+./setup-k8s-ui.sh
