@@ -15,7 +15,7 @@ git clone https://github.com/nodnarboen/HOT-k8s.git
 Install OneAgent Operator
 
 ``` bash
-./install-oneagent-operator.sh
+~/HOT-k8s/install-oneagent-operator.sh
 ```
 
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
