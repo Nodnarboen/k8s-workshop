@@ -2,11 +2,9 @@
 
 For our Hands-On, you will need to run the sample application sock-shop
 
-### 1. Clone and Run the Sample App sock-shop
+### 1. Run the Sample App sock-shop
 
 ```bash
-git clone https://github.com/nodnarboen/HOT-k8s.git
-cd HOT-k8s
 ./deploy-sockshop.sh
 ```
 
