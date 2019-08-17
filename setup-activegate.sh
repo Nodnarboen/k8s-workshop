@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source var.sh
+
 gcloud compute instances create dynatrace-activegate \
 --image-family ubuntu-1604-lts \
 --image-project ubuntu-os-cloud \
