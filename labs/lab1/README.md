@@ -42,10 +42,10 @@ For example for Australia Southeast, the command will be
 gcloud config set compute/zone australia-southeast1-a
 ```
 
-Create your GKE cluster named <b>dynatracek8s</b> in GKE with the following command
+Create your GKE cluster named <b>k8sworkshop</b> in GKE with the following command
 
 ```bash
-gcloud container clusters create dynatracek8s
+gcloud container clusters create k8sworkshop --image-type=Ubuntu
 ```
 
 Once completed, you will have a running GKE Cluster!
