@@ -16,4 +16,3 @@ gcloud compute scp ~/HOT-k8s/install-activegate.sh \
 echo "Copied file to Activegate"
 
 gcloud compute ssh --zone australia-southeast1-a dynatrace-activegate --command "./install-activegate.sh $tenantID $paastoken"
-echo "SSH in VM to run file"
