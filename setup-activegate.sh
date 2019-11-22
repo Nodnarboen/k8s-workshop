@@ -10,4 +10,4 @@ gcloud compute instances create dynatrace-activegate \
 gcloud compute scp ~/HOT-k8s/install-activegate.sh \
       dynatrace-activegate:~/ --zone australia-southeast1-a
 
-gcloud compute ssh --zone australia-southeast1-a dynatrace-activegate --command "./install-activegate.sh $attendeeID $paastoken"
+gcloud compute ssh --zone australia-southeast1-a dynatrace-activegate --command "./install-activegate.sh $tenantID $paastoken"
