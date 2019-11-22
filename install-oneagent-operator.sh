@@ -2,12 +2,13 @@
 
 read -p 'Dynatrace SaaS(S) or Dynatrace Managed(M) (S/M)?' env
 
-if [[ $REPLY =~ ^[Ss]$ ]]
+if [[ $env  =~ ^[Ss]$ ]]
 then
 read -p 'Dynatrace Tenant ID (ex. https://<TENANT_ID>.live.dynatrace.com): ' tenantID
-elif [[ $REPLY =~ ^[Mm]$ ]]
+elif [[ $env  =~ ^[Mm]$ ]]
+then
 read -p 'Dynatrace Tenant ID (ex. https://<TENANT_ID>.dynatrace-managed.com): ' tenantID
-read -p "Dynatrace Environment ID (ex. https://<TENANT_ID>.dynatrace-managed.com/e/<ENVIRONMENT_ID>): " envID
+read -p 'Dynatrace Environment ID (ex. https://<TENANT_ID>.dynatrace-managed.com/e/<ENVIRONMENT_ID>): ' envID
 fi
 
 read -p 'Dynatrace API Token: ' apitoken
@@ -15,20 +16,27 @@ read -p 'Dynatrace PaaS Token: ' paastoken
 
 echo ""
 echo -e "Please confirm all are correct: "
-if [[ $REPLY =~ ^[Ss]$ ]]
+if [[ $env =~ ^[Ss]$ ]]
 then
 echo "Your Dynatrace URL is: https://$tenantID.live.dynatrace.com"
-elif [[ $REPLY =~ ^[Mm]$ ]]
+elif [[ $env =~ ^[Mm]$ ]]
+then
 echo "Your Dynatrace URL is: https://$tenantID.dynatrace-managed.com/e/$envID"
 fi
 echo "Dynatrace API Token: $apitoken"
 echo "Dynatrace PaaS Token: $paastoken"
+read -p "Is this all correct? (y/n) : " -n 1 -r
+echo ""
 
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
 cat <<EOF > var.sh
-attendeeID=$attendeeID
+tenantID=$tenantID
+environmentID=$envID
 apitoken=$apitoken
 paastoken=$paastoken
 EOF
+fi
 
 kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole cluster-admin \
@@ -45,13 +53,14 @@ if [[ -f "cr.yaml" ]]; then
     echo "Removed cr.yaml"
 fi
 
+LATEST_RELEASE=v0.3.1
 curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml
 
 # read the yml template from a file and values with the strings 
 
 case $envID in
         '')
-        echo "SaaS Deplyoment"
+        echo "SaaS Deployment"
         sed -i 's/apiUrl: https:\/\/ENVIRONMENTID.live.dynatrace.com\/api/apiUrl: https:\/\/'$tenantID'.live.dynatrace.com\/api/' cr.yaml
         ;;
         *)
