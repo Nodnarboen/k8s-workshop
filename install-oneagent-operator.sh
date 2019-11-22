@@ -1,8 +1,17 @@
 #!/bin/bash
 
-read -p 'AttendeeID: ' attendeeID
-read -p 'API Token: ' apitoken
-read -p 'PaaS Token: ' paastoken
+read -p 'Dynatrace SaaS(S) or Dynatrace Managed(M) (S/M)?' env
+
+if [[ $REPLY =~ ^[Ss]$ ]]
+then
+read -p 'Dynatrace Tenant ID (ex. https://<TENANT_ID>.live.dynatrace.com): ' tenantID
+elif [[ $REPLY =~ ^[Mm]$ ]]
+read -p 'Dynatrace Tenant ID (ex. https://<TENANT_ID>.dynatrace-managed.com): ' tenantID
+read -p "Dynatrace Environment ID (ex. https://<TENANT_ID>.dynatrace-managed.com/e/<ENVIRONMENT_ID>): " envID
+fi
+
+read -p 'Dynatrace API Token: ' apitoken
+read -p 'Dynatrace PaaS Token: ' paastoken
 
 cat <<EOF > var.sh
 attendeeID=$attendeeID
