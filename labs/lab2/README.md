@@ -19,9 +19,9 @@ cd HOT-k8s
 ./install-oneagent-operator.sh
 ```
 
-1. Locate your AttendeeID from your Dynatrace environment. 
-It can be found in this format dynatrace-k8s-<b>AttendeeID</b>
-2. Enter your AttendeeID to the screen prompt.
+1. Choose whether you are using a Dynatrace SaaS or Managed environment.
+2. Enter your TenantID to the screen prompt.
+You will need to also enter your EnvironmentID for Dynatrace Managed.
 3. Get an API token for the Dynatrace API with the scope Access problem and event feed, metrics, and topology. 
 You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</b> 
 4. Enter your API token to the screen prompt.
