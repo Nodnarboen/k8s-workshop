@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#command=$(wget -X GET "https://$1.live.dynatrace.com/api/v1/deployment/installer/gateway/unix/latest" -H "accept: application/octet-stream" -H "Authorization: Api-Token $2")
-#echo "Downloading Activegate"
-#sleep 30s
-
 wget  -O Dynatrace-ActiveGate-Linux-x86-1.179.189.sh "https://$1.live.dynatrace.com/api/v1/deployment/installer/gateway/unix/latest?Api-Token=$2&arch=x86&flavor=default"  
 sudo /bin/sh Dynatrace-ActiveGate-Linux-x86-1.179.189.sh   
 
