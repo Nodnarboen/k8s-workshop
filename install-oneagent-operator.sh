@@ -13,6 +13,17 @@ fi
 read -p 'Dynatrace API Token: ' apitoken
 read -p 'Dynatrace PaaS Token: ' paastoken
 
+echo ""
+echo -e "Please confirm all are correct: "
+if [[ $REPLY =~ ^[Ss]$ ]]
+then
+echo "Your Dynatrace URL is: https://$tenantID.live.dynatrace.com"
+elif [[ $REPLY =~ ^[Mm]$ ]]
+echo "Your Dynatrace URL is: https://$tenantID.dynatrace-managed.com/e/$envID"
+fi
+echo "Dynatrace API Token: $apitoken"
+echo "Dynatrace PaaS Token: $paastoken"
+
 cat <<EOF > var.sh
 attendeeID=$attendeeID
 apitoken=$apitoken
@@ -29,9 +40,27 @@ kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent
 
 kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=$apitoken" --from-literal="paasToken=$paastoken"
 
-# read the yml template from a file and substitute the string 
-# {{MYVARNAME}} with the value of the MYVARVALUE variable
-template=`cat "cr.yaml" | sed "s/{{attendeeID}}/$attendeeID/g"`
+if [[ -f "cr.yaml" ]]; then
+    rm -f cr.yaml
+    echo "Removed cr.yaml"
+fi
 
-# apply the yml with the substituted value
-echo "$template" | kubectl create -f -
+curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml
+
+# read the yml template from a file and values with the strings 
+
+case $envID in
+        '')
+        echo "SaaS Deplyoment"
+        sed -i 's/apiUrl: https:\/\/ENVIRONMENTID.live.dynatrace.com\/api/apiUrl: https:\/\/'$tenantID'.live.dynatrace.com\/api/' cr.yaml
+        ;;
+        *)
+        echo "Managed Deployment"
+        sed -i 's/apiUrl: https:\/\/ENVIRONMENTID.live.dynatrace.com\/api/apiUrl: https:\/\/'$tenantID'.dynatrace-managed.com\/e\/'$envID'\/api/' cr.yaml
+        ;;
+        ?)
+        usage
+        ;;
+esac
+
+kubectl create -f cr.yaml
