@@ -1,7 +1,7 @@
 #!/bin/bash
 source var.sh
 
-#kubectl apply -f kubernetes-monitoring-service-account.yaml
+kubectl apply -f kubernetes-monitoring-service-account.yaml
 
 printf "Your k8s API URL\n"
 url=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
