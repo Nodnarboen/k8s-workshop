@@ -10,8 +10,7 @@ After saving, you will need to re-apply the change.
 
 ```bash
 kubectl apply -f front-end.yml
-cd /k8s-workshop/
-./recycle-sockshop-frontend.sh
+./k8s-workshop/recycle-sockshop-frontend.sh
 ```
 
 ### 2. Validate
