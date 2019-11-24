@@ -9,9 +9,9 @@ cd k8s-workshop
 ./deploy-sockshop.sh
 ```
 
-Once running, you can go to /HOT-k8s/manifests/sockshop-app/production/front-end.yml to view the content in it
+Once running, you can go to /manifests/sockshop-app/production/front-end.yml to view the content in it
 
-![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture11.png)
+![JSON](https://github.com/Nodnarboen/k8s-workshop/blob/master/assets/Picture11.png)
 
 ### 2. Viewership role for service accounts
 The OneAgent will use a pod service account to query for its metadata via the Kubernetes REST API.
@@ -31,7 +31,7 @@ Wait for the Dynatrace to pickup the change. Alternatively, you can recycle the 
 
 Once working, you can validate the change in Dynatrace
 
-![JSON](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture12.png)
+![JSON](https://github.com/Nodnarboen/k8s-workshop/blob/master/assets/Picture12.png)
 
 :arrow_up: [Back to TOC](/README.md) :arrow_left: [Prev](../lab3/README.md)   :arrow_right: [Next](../lab5/README.md)  
 
