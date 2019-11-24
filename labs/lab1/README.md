@@ -45,7 +45,7 @@ gcloud config set compute/zone australia-southeast1-a
 Create your GKE cluster named <b>k8sworkshop</b> running Ubuntu in GKE with the following command
 
 ```bash
-gcloud container clusters create k8sworkshop --image-type=ubuntu
+gcloud container clusters create k8sworkshop --image-type=ubuntu_containerd --node-version=1.14.8-gke.12
 ```
 
 Once completed, you will have a running GKE Cluster!
