@@ -4,6 +4,15 @@
 
 Add some Environment Variables to the /k8s-workshop/manifests/sockshop-app/production/front-end.yml
 
+Make sure that the indentation is correct and that they isn't any error promptings
+
+```bash
+        - name: DT_TAGS
+          value: "product=sockshop"
+        - name: DT_CUSTOM_PROP
+          value: "SERVICE_TYPE=FRONTEND"
+```
+
 ![JSON](https://github.com/Nodnarboen/k8s-workshop/blob/master/assets/Picture13.png)
 
 After saving, you will need to re-apply the change.
