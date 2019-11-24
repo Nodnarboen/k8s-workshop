@@ -25,7 +25,7 @@ Within the screen prompt, enter the following details:
 4. API Token
 - Create one from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</b>
 - Enable <b>Access problem and event feed, metrics, and topology</b> toggle
-- Enable <b>Write Configuration</b> toggle (needed for activegate at the next step)
+- Enable <b>Write Configuration</b> toggle (needed for Activegate setup for the next step)
 5. Platform-as-a-Service token
 - Create one from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b>
 6. Confirm that the details are correct 
@@ -39,13 +39,7 @@ Steps have been automated from our [official documentation page](https://www.dyn
 
 ### Pointers / Troubleshooting Tips:
 
-1. When editing the cr.yml, make sure the the <b>indentation alignment</b> are correct.
-
-2. Take note of <b>not swapping</b> the declaration of the API and PaaS token in the secret. 
-
-3. If you need got an error regarding the token, you can use <b>kubectl replace -f secret oneagent</b> to remove the current secret
-
-4. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods. This will cycle through the pods and you will have new pod instances.
+1. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods. This will cycle through the pods and you will have new pod instances.
 
 Official troubleshooting page could be found [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/)
 
