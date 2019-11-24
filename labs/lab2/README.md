@@ -17,17 +17,21 @@ Install OneAgent Operator
 ``` bash
 ./k8s-workshop/install-oneagent-operator.sh
 ```
+Within the screen prompt, enter the following details:
 
-1. Choose whether you are using a Dynatrace SaaS or Managed environment.
-2. Enter your TenantID to the screen prompt.
-You will need to also enter your EnvironmentID for Dynatrace Managed.
-3. Get an API token for the Dynatrace API with the scope Access problem and event feed, metrics, and topology. 
-You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</b> 
-4. Enter your API token to the screen prompt.
-5. Get a Platform-as-a-Service token. You can find it from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b>
-6. Enter your PaaS token to the screen prompt.
+1. Dynatrace SaaS or Managed environment
+2. TenantID
+3. EnvironmentID (For Dynatrace Managed ONLY)
+4. API Token
+- Create one from <b>Settings</b> -> <b>Integration</b> -> <b>Dynatrace API</b>
+- Enable <b>Access problem and event feed, metrics, and topology</b> toggle
+- Enable <b>Write Configuration</b> toggle (needed for activegate at the next step)
+5. Platform-as-a-Service token
+- Create one from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b>
+6. Confirm that the details are correct 
 
-That's it! Dynatrace is now monitoring your GKE Environment!
+The script will run and Dynatrace Operator will be installed in your environment. 
+And that's it! Dynatrace is now monitoring your GKE Environment!
 
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
 
