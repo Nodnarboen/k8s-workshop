@@ -15,8 +15,7 @@ git clone https://github.com/Nodnarboen/k8s-workshop.git
 Install OneAgent Operator
 
 ``` bash
-cd HOT-k8s 
-./install-oneagent-operator.sh
+./k8s-workshop/install-oneagent-operator.sh
 ```
 
 1. Choose whether you are using a Dynatrace SaaS or Managed environment.
