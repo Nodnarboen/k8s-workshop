@@ -5,6 +5,7 @@ For our Hands-On, you will need to run the sample application sock-shop
 ### 1. Run the Sample App sock-shop
 
 ```bash
+cd k8s-workshop
 ./deploy-sockshop.sh
 ```
 
