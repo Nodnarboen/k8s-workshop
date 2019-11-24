@@ -9,7 +9,7 @@ Go to <b>Settings -> Processes and Container -> Container Monitoring</b>
 Download codebase from Git repository
 
 ``` bash
-git clone https://github.com/nodnarboen/HOT-k8s.git
+git clone https://github.com/Nodnarboen/k8s-workshop.git
 ```
 
 Install OneAgent Operator
