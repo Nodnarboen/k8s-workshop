@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /k8s-workshop/var.sh
+source k8s-workshop/var.sh
 
 gcloud compute instances create dynatrace-activegate \
 --image-family ubuntu-1604-lts \
