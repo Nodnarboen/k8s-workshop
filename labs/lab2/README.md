@@ -30,12 +30,12 @@ Within the screen prompt, enter the following details:
 - Create one from <b>Settings</b> -> <b>Integration</b> -> <b>Platform as a Service</b>
 6. Confirm that the details are correct 
 
+![Setup](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
+
 The script will run and Dynatrace Operator will be installed in your environment. 
 And that's it! Dynatrace is now monitoring your GKE Environment!
 
 Steps have been automated from our [official documentation page](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/deploy-oneagent-on-google-kubernetes-engine-clusters/)
-
-![GKE-CLI-Indentation](https://github.com/Nodnarboen/HOT-k8s/blob/master/assets/Picture7.png)
 
 ### Pointers / Troubleshooting Tips:
 
