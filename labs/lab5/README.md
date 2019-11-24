@@ -4,7 +4,7 @@
 
 Add some Environment Variables to the /k8s-workshop/manifests/sockshop-app/production/front-end.yml
 
-Make sure that the indentation is correct and that they isn't any error promptings
+Make sure that the indentation is correct and that they aren't any error promptings
 
 ```bash
         - name: DT_TAGS
