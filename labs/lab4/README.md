@@ -25,7 +25,7 @@ You can repeat the procedure for the dev project
 
 	$ kubectl create rolebinding serviceaccounts-view --clusterrole=view --	group=system:serviceaccounts:dev --namespace=dev
 
-Wait for the Dynatrace to pickup the change. Alternatively, you can recycle the apps with HOT-k8s/recycle-sockshop-frontend.sh
+Wait for the Dynatrace to pickup the change. Alternatively, you can recycle the apps with k8s-workshop/recycle-sockshop-frontend.sh
 
 ### 3. Validate
 
