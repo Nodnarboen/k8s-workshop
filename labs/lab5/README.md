@@ -18,7 +18,7 @@ Make sure that the indentation is correct and that they aren't any error prompti
 After saving, you will need to re-apply the change.
 
 ```bash
-kubectl apply -f front-end.yml
+kubectl apply -f ~/k8s-workshop/manifests/sockshop-app/production/front-end.yml
 ./k8s-workshop/recycle-sockshop-frontend.sh
 ```
 
