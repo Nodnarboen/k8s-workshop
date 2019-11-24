@@ -1,5 +1,5 @@
 #!/bin/bash
-source var.sh
+source /k8s-workshop/var.sh
 
 kubectl apply -f kubernetes-monitoring-service-account.yaml
 
