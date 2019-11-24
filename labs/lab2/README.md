@@ -19,7 +19,7 @@ Install OneAgent Operator
 ```
 Within the screen prompt, enter the following details:
 
-1. Dynatrace SaaS or Managed environment
+1. S or M (Dynatrace SaaS or Managed environment)
 2. TenantID
 3. EnvironmentID (For Dynatrace Managed ONLY)
 4. API Token
