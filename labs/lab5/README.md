@@ -7,6 +7,7 @@ Add some Environment Variables to the /k8s-workshop/manifests/sockshop-app/produ
 Make sure that the indentation is correct and that they aren't any error promptings
 
 ```bash
+        env:
         - name: DT_TAGS
           value: "product=sockshop"
         - name: DT_CUSTOM_PROP
