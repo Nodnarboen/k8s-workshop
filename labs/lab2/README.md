@@ -1,5 +1,6 @@
-# Install Dynatrace OneAgent Operator for Kubernetes (Containerd)
+# Install Dynatrace OneAgent Operator for Kubernetes
 
+### Optional Step unless running Containerd
 Before running the Oneagent Operator, please make sure that deep monitoring for Containerd Monitoring is enabled
 
 Go to <b>Settings -> Processes and Container -> Container Monitoring</b>
