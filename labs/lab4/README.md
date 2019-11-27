@@ -9,6 +9,8 @@ cd k8s-workshop
 ./deploy-sockshop.sh
 ```
 
+Once deployed, you can locate the front-end endpoint from GCP ( Kubernetes Engine -> Services & Ingress)
+
 Once running, you can go to /manifests/sockshop-app/production/front-end.yml to view the content in it
 
 ![JSON](https://github.com/Nodnarboen/k8s-workshop/blob/master/assets/Picture11.png)
