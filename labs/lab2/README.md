@@ -39,7 +39,7 @@ Steps have been automated from our [official documentation page](https://www.dyn
 
 ### Pointers / Troubleshooting Tips:
 
-1. Run <b>kubectl get pods -n dynatrace</b> and you should see <b>Running</> under status for the pods
+1. Run <b>kubectl get pods -n dynatrace</b> and you should see <b>Running</b> under status for the pods
 2. If needed, run <b>kubectl delete --all pods --namespace=dynatrace</b> to delete all pods. This will cycle through the pods and you will have new pod instances.
 
 Official troubleshooting page could be found [here](https://www.dynatrace.com/support/help/technology-support/cloud-platforms/google-cloud-platform/google-kubernetes-engine/installation-and-operation/full-stack/troubleshoot-oneagent-on-google-kubernetes-engine/)
