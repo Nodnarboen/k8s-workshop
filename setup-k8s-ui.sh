@@ -12,3 +12,4 @@ bearertoken=$(kubectl get secret $sa -o jsonpath='{.data.token}' -n dynatrace | 
 echo $bearertoken
 
 curl -X POST "https://$tenantID.live.dynatrace.com/api/config/v1/kubernetes/credentials" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token $apitoken" -H "Content-Type: application/json; charset=utf-8" -d "{ \"label\": \"k8sworkshop\", \"endpointUrl\": \"$url\", \"authToken\": \"$bearertoken\", \"active\": true, \"endpointStatus\": \"ASSIGNED\", \"endpointStatusInfo\": \"\"}"
+printf "Your Bearer token\n"
